@@ -1,3 +1,18 @@
+# How to RUN:
+
+to save pixel art to file:
+```
+poetry run python procedural_pixel_art -s
+
+```
+
+to see pixel art:
+```
+poetry run python procedural_pixel_art 
+
+```
+
+
 # Zadanie: Proceduralny Pixel Art
 
 ## O zadaniu
@@ -198,3 +213,4 @@ Keep it simple! Just create a set of single-responsible functions and use build-
 - Does the function determine the next state correctly?
 - Does the flip function do its job?
 - Is the outline is ok?
+
