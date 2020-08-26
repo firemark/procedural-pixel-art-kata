@@ -1,7 +1,7 @@
 import copy
 from collections.abc import Iterable
 from random import randint
-from typing import List
+from typing import List, Tuple
 
 from procedural_pixel_art.cells import (
     Position,
@@ -55,7 +55,7 @@ def get_cells_position_to_revive(grid: List[List[int]]) -> Iterable:
 
 
 def get_cell_positions_on_neighbors_number_condition(
-    grid, cells_positions, condition_func
+        grid, cells_positions, condition_func
 ):
     for x, y in cells_positions:
         cell_coord = Position(x=x, y=y)
@@ -73,7 +73,7 @@ def get_neighbors_vitality_status(cell_coords, old_grid: List[List[int]]) -> Ite
 
 
 def get_number_of_alive_neighbors(
-    grid: List[List[int]], cell_position: Position
+        grid: List[List[int]], cell_position: Position
 ) -> int:
     number_of_alive_neighbors = 0
     neighbors_values = get_neighbors_vitality_status(cell_position, grid)
@@ -123,15 +123,15 @@ def get_cell_positions_on_value_condition(grid, condition_func):
                 yield x_index, y_index
 
 
-def grid_to_rgb_array(grid: List[List[int]]) -> Iterable:
+def grid_to_rgb_array(grid: List[List[int]], colors: List[Tuple[int, int, int]]) -> Iterable:
     """
    Transform grid to rgb colors.
     """
     for row in grid:
         for cell in row:
             if cell == 1:
-                yield from [128, 0, 0]  # brown color
+                yield from colors[0]  # brown color
             elif cell == 2:
-                yield from [255, 255, 0]  # yellow color
+                yield from colors[1]  # yellow color
             else:
-                yield from [0, 0, 0]  # black color
+                yield from colors[2]  # black color
