@@ -29,4 +29,6 @@ Below some of generated pixelarts.
 ![alt text](images/generated_pixel_art_1598456639.354067.png)
 ![alt text](images/generated_pixel_art_1598456602.289944.png)
 ![alt text](images/generated_pixel_art_1598456596.965087.png)
+![alt text](images/generated_pixel_art_1598456599.218331.png)
+
 
