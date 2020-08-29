@@ -39,7 +39,7 @@ class PixelArt:
     def save(self, name, size=(128, 128)):
         """Save grid to a png file."""
         img = self._generate_png(size)
-        img.save(f"images/{name}.png")
+        img.save(f"{name}.png")
 
     def show(self, size=(128, 128)):
         img = self._generate_png(size)
