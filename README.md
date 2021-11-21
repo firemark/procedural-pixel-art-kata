@@ -18,6 +18,13 @@ poetry run python procedural_pixel_art -s -n 100
 
 ```
 
+If you want run flask app use docker
+
+```
+docker build -t pixel .
+docker run -p 5000:5000 --volume $(pwd)/:"/app" --rm pixel
+``````
+
 Below some of generated pixelarts.
 
 ![alt text](images/generated_pixel_art_1598284189.503278.png)
@@ -31,5 +38,4 @@ Below some of generated pixelarts.
 ![alt text](images/generated_pixel_art_1598456596.965087.png)
 ![alt text](images/generated_pixel_art_1598456599.218331.png)
 ![alt text](images/generated_pixel_art_1598510976.148594.png)
-
 
