@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 from flask import send_file
 from datetime import datetime
 from procedural_pixel_art.art_generator import PixelArt
@@ -30,6 +30,11 @@ def get_image():
 	art.save(file_path)
 	response = send_file(f"{file_path}.png", mimetype='image/png')
 	return response
+
+
+@app.route('/andrzejki')
+def andrzejki():
+	return render_template("andrzejki.html")
 
 
 if __name__ == '__main__':
